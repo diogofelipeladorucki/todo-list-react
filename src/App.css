@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+.app {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr minmax(300px, 500px) 1fr;
+
+  grid-template-areas: 
+  "do doing done"
+  "do doing done"
+  "do doing done";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.do {
+  grid-area: do;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list__col-1 {
+  grid-area: list-col-1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list__col-2 {
+  grid-area: list-col-2;
 }
 
-.App-link {
-  color: #61dafb;
+.list__co3-1 {
+  grid-area: list-col-3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.doing {
+  grid-area: doing;
+}
+
+.done {
+  grid-area: done;
 }
